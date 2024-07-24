@@ -63,8 +63,12 @@ export default class VideIotServer {
       if (request.headers instanceof Headers) {
         // 正式的
         // const uri = request.url.replace(baseUrl, '');
+        // let uri = request.url.replace(
+        //   `${location.protocol}//${location.host}/api`,
+        //   ""
+        // );
         let uri = request.url.replace(
-          `${location.protocol}//${location.host}/api`,
+          `https://pro-api.anytalk.agrtc.cn/api`,
           ""
         );
         const timestamp = Date.now().toString();
