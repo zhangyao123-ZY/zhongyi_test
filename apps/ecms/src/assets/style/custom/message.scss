@@ -1,0 +1,7 @@
+.message_box_custom {
+    .el-message-box__container {
+        .el-message-box__message {
+            @apply w-full text-center;
+        }
+    }
+}

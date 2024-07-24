@@ -1,0 +1,19 @@
+/* pages/device/create/createQLY/net/connect/connect.wxss */
+
+.img-tips {
+  width: 170px;
+  height: auto;
+}
+
+.connect-process {
+  color: #3678E9;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.text-tips {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}

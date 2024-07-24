@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/device/list/list",
+    "pages/device/create/createGB/index",
+    "pages/device/create/createQLY/index",
+    "pages/device/create/createQLY/wifi/reset/reset",
+    "pages/device/create/createQLY/wifi/config/config",
+    "pages/device/create/createQLY/net/reset/reset",
+    "pages/device/create/createQLY/net/scan/scan",
+    "pages/device/create/createQLY/net/mac/mac",
+    "pages/device/create/createQLY/net/connect/connect",
+    "pages/device/create/create1400/index",
+    "pages/device/create/create1400/create",
+    "pages/device/create/result/result",
+    "pages/device/setting/index",
+    "pages/device/setting/info/info",
+    "pages/device/setting/rename/rename",
+    "pages/device/setting/1400info/1400info",
+    "pages/video/video",
+    "pages/mine/mine"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/device/list/list"
+      },
+      {
+        "pagePath": "pages/mine/mine"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "componentFramework": "glass-easel",
+  "lazyCodeLoading": "requiredComponents"
+}

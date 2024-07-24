@@ -1,0 +1,95 @@
+<!--pages/device/create/createQLY/wifi/config/config.wxml-->
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+
+<view class="full-page">
+
+  <view wx:if="{{ step === 1 }}" class="p-15 w-full h-full flex-1 flex flex-col items-center justify-between border-box">
+
+    <view class="w-full">
+
+      <van-field
+        value="{{ deviceName }}"
+        placeholder="请输入"
+        clearable
+        input-align="right"
+        maxlength="40"
+        label="设备名称"
+        extra-event-params
+        bind:input="onDeviceNameChange"
+      />
+
+      <van-field
+        value="{{ mac }}"
+        placeholder="请输入"
+        clearable
+        input-align="right"
+        label="MAC 地址"
+        extra-event-params
+        bind:input="onMacChange"
+      />
+
+      <van-cell title="WI-FI" is-link value="{{ createForm.wifiSsid }}" bind:click="showWifiSsid" />
+
+      <view class="px-16 my-8"><text class="text-tips">暂不支持 5GHz 网络，请勿连接带5G名称的 Wi-Fi</text></view>
+
+      <van-field
+        class="w-full"
+        value="{{ wifiPwd }}"
+        placeholder="请输入密码"
+        label="WI-FI 密码"
+        input-align="right"
+        extra-event-params
+        bind:input="onPwdChange"
+      />
+
+      <van-cell title="加密方式" is-link value="{{ wifiSecurityName }}" bind:click="showWifiSecurity" />
+    </view>
+
+    <van-button type="info" bind:click="createDevice">完成</van-button>
+  </view>
+
+  <view wx:else class="full-page flex flex-col">
+
+    <view class="text-center">
+      <image class="" src="{{ qrCodeSrc }}" mode="widthFix" />
+    </view>
+
+    <view class="text-center mt-20">
+      <text class="tips">摄像头红灯闪烁之后，使二维码正对其摄像头</text>
+    </view>
+
+    <view class="w-full text-center">
+      <image src="../../../../../../assets/images/wifi-qrcode-tips.jpg" mode="widthFix" />
+    </view>
+
+    <view class="flex-1 flex justify-center items-center bottom">
+      <view class="flex flex-col justify-center items-center">
+        <text class="label" bind:tap="showError">未听到“嘀”声</text>
+        <van-button class="mt-20 btn" block type="info" bind:click="goToSuccess">听到“嘀”声</van-button>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<!-- Wi-Fi -->
+<van-action-sheet
+  show="{{ isWifiSsidShow }}"
+  actions="{{ wifiSsidActions }}"
+  cancel-text="取消"
+  bind:cancel="hideWifiSsid"
+  bind:close="hideWifiSsid"
+  bind:select="onSelectWifiSsid"
+/>
+
+<!-- Wi-Fi 加密方式 -->
+<van-action-sheet
+  show="{{ isWifiSecurityShow }}"
+  actions="{{ wifiSecurityActions }}"
+  cancel-text="取消"
+  bind:cancel="hideWifiSecurity"
+  bind:close="hideWifiSecurity"
+  bind:select="onSelectWifiSecurity"
+/>

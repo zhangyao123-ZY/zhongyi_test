@@ -1,0 +1,11 @@
+<!--pages/device/create/result/result.wxml-->
+<view class="full-page flex flex-col justify-between items-center py-60 border-box">
+
+  <view class="text-xl">
+    <van-icon name="{{ status === 'success' ? 'passed' : 'close' }}" color="{{ status === 'success' ? 'green' : 'red' }}" size="28px" />
+    <text class="ml-8">添加{{ status === 'success' ? '成功' : '失败' }}</text>
+  </view>
+
+  <van-button class="w-320" block type="info" bind:click="done">完成</van-button>
+
+</view>

@@ -1,0 +1,80 @@
+<!--pages/device/list/list.wxml-->
+<van-toast id="van-toast" />
+
+<view id="box" class="full-page">
+
+  <view class="px-16 pb-tabbar w-full h-full border-box flex flex-col">
+    <view class="flex justify-between items-center">
+      <text class="text-lg">当前租户名称</text>
+      <image class="w-16 h-16 p-4" src="../../../assets/svg/plus.svg" bind:tap="showCreateDevice" />
+    </view>
+  
+    <view class="py-16 flex items-center justify-end" style="height: 34px;">
+      <view wx:if="{{ searchInputIsShow }}">
+        <van-search
+          custom-class="search-component"
+          field-class="search-field"
+          input-class="search-input"
+          model:value="{{ searchInput }}"
+          placeholder="请输入搜索关键词"
+          show-action
+          background="transparent"
+          bind:search="onSearch"
+          bind:cancel="onCancel"
+        />
+      </view>
+      <image wx:else class="w-16 h-16" src="../../../assets/svg/search.svg" bind:tap="showSearchInput" />
+      <image class="mx-8 w-16 h-16" src="../../../assets/svg/layout-{{listLayout}}.svg" bind:tap="toggleLayout" />
+      <view class="split-line"></view>
+      <image class="w-16 h-16" src="../../../assets/svg/filter.svg" bind:tap="showDeviceFilter" />
+    </view>
+
+    <view class="flex-1 overflow-auto">
+      <scroll-view
+        class="h-full"
+        scroll-x
+        scroll-y
+        enable-back-to-top
+        bindscrolltolower="getNextPage"
+      >
+        <view wx:if="{{ channelList.length > 0 }}" class="w-full h-full overflow-auto">
+          <van-grid wx:if="{{ listLayout === 'card' }}" column-num="2" gutter="{{ 10 }}">
+            <van-grid-item wx:for="{{ channelList }}" wx:key="channelId" use-slot content-class="p-0">
+              <device-card class="w-full" info="{{ item }}" data-info="{{ item }}" bind:tap="goToVideo"></device-card>
+            </van-grid-item>
+          </van-grid>
+
+          <view wx:else class="w-full h-full overflow-auto">
+            <device-list-item wx:for="{{ channelList }}" wx:key="channelId" info="{{ item }}" data-info="{{ item }}" bind:tap="goToVideo"></device-list-item>
+          </view>
+        </view>
+
+        <view wx:else class="w-full h-full flex justify-center items-center">
+          <text style="font-size: 18px; color: #3D3D3D;">无设备</text>
+        </view>
+      </scroll-view>
+    </view>
+  
+  </view>
+
+  <!-- 添加设备选项 -->
+  <van-action-sheet
+    show="{{ showCreateDeviceType }}"
+    actions="{{ createDeviceActions }}"
+    cancel-text="取消"
+    bind:cancel="onCreateDeivceClose"
+    bind:close="onCreateDeivceClose"
+    bind:select="onSelectCreateDeivceType"
+  />
+
+  <!-- 设备列表过滤选项 -->
+  <van-action-sheet
+    show="{{ showDeviceFilter }}"
+    actions="{{ deviceFilterActions }}"
+    cancel-text="取消"
+    bind:cancel="onDeivceFilterClose"
+    bind:close="onDeivceFilterClose"
+    bind:select="onSelectDeivceFilter"
+  />
+
+</view>

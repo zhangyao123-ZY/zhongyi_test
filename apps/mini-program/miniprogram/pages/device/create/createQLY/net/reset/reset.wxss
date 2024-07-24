@@ -1,0 +1,16 @@
+/* pages/device/create/createQLY/net/reset/reset.wxss */
+
+.bottom {
+  /* background-color: #333333; */
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #999999;
+}
+
+.btn {
+  width: 230px;
+}

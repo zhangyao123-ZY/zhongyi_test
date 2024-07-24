@@ -1,0 +1,76 @@
+<!--pages/device/create/createGB/index.wxml-->
+<view class="create-form">
+
+  <van-toast id="van-toast" />
+
+  <van-cell-group>
+
+    <van-field
+      model:value="{{ deviceName }}"
+      placeholder="请输入"
+      clearable
+      input-align="right"
+      maxlength="40"
+      label="设备名称："
+    />
+
+    <van-cell
+      title="设备类型："
+      is-link
+      model:value="{{ deviceTypeName || '请选择设备类型' }}" bind:click="showSelectDeviceType"
+    />
+
+    <van-field
+      model:value="{{ channelCount }}"
+      placeholder="请输入"
+      clearable
+      input-align="right"
+      label="通道数量："
+    />
+
+    <van-field
+      model:value="{{ value }}"
+      placeholder="请输入"
+      clearable
+      input-align="right"
+      label="平台ID："
+    />
+
+    <van-cell title="是否支持ipv6：" is-link value="{{ isSupportV6 === '1' ? '是' : '否' }}" bind:click="showSelectIsSupportV6" />
+
+    <van-cell title="是否内网：" is-link value="{{ isIntranet === 1 ? '是' : '否' }}" bind:click="showSelectIsIntranet" />
+
+  </van-cell-group>
+
+  <van-button class="add-btn" round block type="info" bind:click="createGBDevice">确定添加</van-button>
+</view>
+
+<!-- 设备类型选项 -->
+<van-action-sheet
+  show="{{ showDeviceType }}"
+  actions="{{ deviceTypeActions }}"
+  cancel-text="取消"
+  bind:cancel="hideSelectDeviceType"
+  bind:close="hideSelectDeviceType"
+  bind:select="onSelectDeivceType"
+/>
+
+<!-- 是否支持ipv6选项 -->
+<van-action-sheet
+  show="{{ showV6Actions }}"
+  actions="{{ isSupportV6Actions }}"
+  cancel-text="取消"
+  bind:cancel="hideSelectIsSupportV6"
+  bind:close="hideSelectIsSupportV6"
+  bind:select="onSelectIsSupportV6"
+/>
+
+<!-- 是否内网选项 -->
+<van-action-sheet
+  show="{{ showIntranetActions }}"
+  actions="{{ isIntranetActions }}"
+  cancel-text="取消"
+  bind:cancel="hideSelectIsIntranet"
+  bind:close="hideSelectIsIntranet"
+  bind:select="onSelectIsIntranet"
+/>

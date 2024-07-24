@@ -1,0 +1,11 @@
+/* pages/device/create/createGB/index.wxss */
+.create-form {
+  padding: 15px;
+}
+
+.add-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 110px;
+  width: 230px;
+}

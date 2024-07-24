@@ -1,0 +1,4 @@
+/* pages/device/setting/index.wxss */
+.create-form {
+  padding: 15px;
+}

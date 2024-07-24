@@ -1,0 +1,23 @@
+<!--pages/device/create/createQLY/net/connect/connect.wxml-->
+<van-dialog id="van-dialog" />
+
+<view class="full-page flex flex-col items-center py-30 border-box">
+
+  <view class="mt-30 img-tips">
+    <image class="w-full" src="../../../../../../assets/images/qly-connect-device.jpg" mode="widthFix" />
+  </view>
+
+  <view class="flex-1 flex justify-center items-center bottom">
+    <view class="flex flex-col justify-center items-center">
+
+      <text class="connect-process">连接 {{ connectPercent }}% </text>
+      <text class="mt-30 text-tips">请耐心等候，连接过程大约需要1~2分钟</text>
+      <text class="text-tips">红灯闪烁代表即将成功</text>
+
+    </view>
+  </view>
+
+  <view>
+    <text class="text-tips" bind:tap="showError">添加遇到问题</text>
+  </view>
+</view>

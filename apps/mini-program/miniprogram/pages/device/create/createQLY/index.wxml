@@ -1,0 +1,20 @@
+<!--pages/device/create/createQLY/index.wxml-->
+<view class="full-page">
+  <view class="p-15 w-full h-full flex-1 flex flex-col items-center justify-between border-box">
+    <view class="w-full p-8 border-box">
+
+      <view class="create-item" bind:tap="createByWifi">
+        <text>通过扫码添加</text>
+        <image src="../../../../assets/svg/right.svg" mode=""/>
+      </view>
+
+      <view class="create-item" bind:tap="createNetwork">
+        <text>通过有线添加</text>
+        <image src="../../../../assets/svg/right.svg" mode=""/>
+      </view>
+
+    </view>
+
+    <!-- <van-button type="info" bind:click="updateDeviceName">确定添加</van-button> -->
+  </view>
+</view>

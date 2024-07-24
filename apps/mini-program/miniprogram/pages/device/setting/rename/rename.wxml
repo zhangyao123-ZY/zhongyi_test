@@ -1,0 +1,14 @@
+<!--pages/device/setting/rename/rename.wxml-->
+<view class="full-page">
+  <view class="p-15 w-full h-full flex-1 flex flex-col items-center justify-between border-box">
+    <van-field
+      class="w-full"
+      model:value="{{ deviceName }}"
+      placeholder="请输入"
+      maxlength="{{40}}"
+      label="设备名称"
+    />
+
+    <van-button type="info" bind:click="updateDeviceName">完成</van-button>
+  </view>
+</view>

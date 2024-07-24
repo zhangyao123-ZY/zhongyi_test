@@ -1,0 +1,2 @@
+<!--pages/device/create/createQLY/net/scan/scan.wxml-->
+<camera class="full-page" device-position="back" flash="off" binderror="error" mode="scanCode" bindscancode="onScanCode"></camera>

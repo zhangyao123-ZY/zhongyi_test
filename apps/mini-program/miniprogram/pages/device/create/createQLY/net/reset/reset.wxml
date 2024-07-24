@@ -1,0 +1,20 @@
+<!--pages/device/create/createQLY/net/reset/reset.wxml-->
+<view class="full-page flex flex-col">
+  <image class="w-full" src="../../../../../../assets/images/qly-reset-network.png" mode="widthFix" />
+
+  <view class="flex-1 flex justify-center items-center bottom">
+    <view class="flex flex-col justify-center items-center">
+      <van-button class="mt-20 btn" block type="info" bind:click="showCreateMode">蓝灯闪烁</van-button>
+    </view>
+  </view>
+</view>
+
+<!-- 添加方式 -->
+<van-action-sheet
+  show="{{ showCreateModeActions }}"
+  actions="{{ createModeActions }}"
+  cancel-text="取消"
+  bind:cancel="hideSelectCreateMode"
+  bind:close="hideSelectCreateMode"
+  bind:select="onSelectCreateMode"
+/>

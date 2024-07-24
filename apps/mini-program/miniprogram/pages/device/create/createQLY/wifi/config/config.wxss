@@ -1,0 +1,5 @@
+/* pages/device/create/createQLY/wifi/config/config.wxss */
+.van-button {
+  width: 230px;
+  margin-bottom: 76px;
+}

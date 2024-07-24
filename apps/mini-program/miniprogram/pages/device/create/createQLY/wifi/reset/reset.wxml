@@ -1,0 +1,13 @@
+<!--pages/device/create/createQLY/wifi/reset/reset.wxml-->
+<van-dialog id="van-dialog" />
+
+<view class="full-page flex flex-col">
+  <image class="w-full" src="../../../../../../assets/images/qly-reset-wifi.jpg" mode="widthFix" />
+
+  <view class="flex-1 flex justify-center items-center bottom">
+    <view class="flex flex-col justify-center items-center">
+      <text class="label" bind:tap="showError">未听到“嘀”声</text>
+      <van-button class="mt-20 btn" block type="info" bind:click="goToConfig">听到“嘀”声</van-button>
+    </view>
+  </view>
+</view>

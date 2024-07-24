@@ -1,0 +1,16 @@
+<!--pages/mine/mine.wxml-->
+<view class="full-page flex flex-col">
+
+  <view class="user-info-wrap">
+    <view class="flex items-center">
+      <image style="width: 60px; height: 60px;" src="../../assets/svg/mine/default-user-avatar.svg" mode=""/>
+
+      <text style="margin-left: 18px; font-size: 14px; line-height: 20px;">租户名称</text>
+    </view>
+  </view>
+
+  <view class="mine-content">
+    <van-button custom-class="logout-btn" round block plain type="default" bind:click="logout">退出登录</van-button>
+  </view>
+
+</view>

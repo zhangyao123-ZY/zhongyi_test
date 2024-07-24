@@ -1,0 +1,10 @@
+<!--pages/device/setting/1400info/1400info.wxml-->
+<view class="create-form">
+  <van-cell-group title="">
+    <van-cell title="1400通道编码" value="{{ deviceInfo.gaChannelCode }}" />
+    <van-cell title="接入账号" value="{{ deviceInfo.account }}" />
+    <van-cell title="接入密码" value="{{ deviceInfo.password }}" />
+    <van-cell title="接入IP" value="{{ deviceInfo.ip }}" />
+    <van-cell title="接入端口" value="{{ deviceInfo.port }}" />
+  </van-cell-group>
+</view>

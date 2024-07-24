@@ -1,0 +1,25 @@
+/* pages/device/create/createQLY/index.wxss */
+.create-item {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 16px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.create-item text {
+  color: #3D3D3D;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.create-item image {
+  width: 16px;
+  height: 16px;
+}
+
+.van-button {
+  width: 230px;
+  margin-bottom: 76px;
+}

@@ -1,0 +1,56 @@
+<!--pages/video/video.wxml-->
+<van-nav-bar
+  title="设备名称"
+  left-arrow
+  safe-area-inset-top="{{ false }}"
+  bind:click-left="onGoBack"
+>
+  <van-icon name="setting-o" slot="right" bind:tap="onGoToSetting" />
+</van-nav-bar>
+
+<view class="full-page">
+  <view class="w-full h-full flex flex-col">
+
+    <view class="w-full" style="height: 210px; background-color: red;">
+    </view>
+
+    <van-tabs active="live" color="#3678E9">
+      <van-tab title="实时直播" name="live">
+
+        <view class="flex justify-between items-center px-20 py-20">
+          <view class="">
+            <view class="flex items-center mb-8">
+              <image class="w-16 h-16" src="../../assets/svg/video/calendar.svg" mode=""/>
+              <text class="ml-8 text-xs">今日预测</text>
+            </view>
+            <text style="color: #999999;">共{{ 0 }}个录像视频</text>
+          </view>
+
+          <view class="storage-switch ">
+            <view class="switch-btn {{ storageType === 'cloud' ? 'active' : '' }}" data-type="cloud" bind:tap="switchStorageType">
+              <image class="w-16 h-16" src="../../assets/svg/video/cloud{{ storageType === 'cloud' ? '-active' : '' }}.svg" mode=""/>
+            </view>
+            <view class="switch-btn {{ storageType === 'sdCard' ? 'active' : '' }}" data-type="sdCard" bind:tap="switchStorageType">
+              <image class="w-16 h-16" src="../../assets/svg/video/sd-card{{ storageType === 'sdCard' ? '-active' : '' }}.svg" mode=""/>
+            </view>
+          </view>
+
+        </view>
+
+      </van-tab>
+
+      <van-tab title="录像" name="record">
+        录像
+      </van-tab>
+    </van-tabs>
+
+    <view class="video-list-area">
+      xxx
+    </view>
+
+    <view class="video-controls pb-30">
+      <text>tools tools</text>
+    </view>
+
+  </view>
+</view>

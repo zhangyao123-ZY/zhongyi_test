@@ -1,0 +1,21 @@
+<!--components/device-panel/device-card.wxml-->
+<view class="device-card-item">
+
+  <view wx:if="{{ info.onlineStatus === 1 }}" class="play-btn">
+    <image src="../../assets/svg/play-btn.svg" mode=""/>
+  </view>
+
+  <view class="info">
+    <view class="title">
+      <view><text>{{ info.channelName }}</text></view>
+      <!-- TODO ipc设备展示设备sn nvr设备展示通道编码 -->
+      <view><text>{{ info.channelSn || info.channelId }}</text></view>
+    </view>
+    <image src="../../assets/svg/cloud-white.svg" mode="" />
+  </view>
+  
+  <view wx:if="{{ info.onlineStatus !== 1 }}" class="offline-tips">
+    <text>设备离线</text>
+  </view>
+
+</view>

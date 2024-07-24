@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "国标协议",
+  "usingComponents": {
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  }
+}

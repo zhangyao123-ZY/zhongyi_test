@@ -1,0 +1,78 @@
+/* components/device-panel/device-card.wxss */
+.device-card-item {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: red;
+}
+
+.device-card-item .play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.device-card-item .play-btn > image {
+  width: 36px;
+  height: 36px;
+}
+
+.device-card-item .info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  z-index: 20;
+}
+
+.device-card-item .info > .title text {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.device-card-item .info > .title > view:first-child > text {
+  font-size: 12px;
+}
+
+
+.device-card-item .info > image {
+  width: 16px;
+  height: 16px;
+}
+
+.device-card-item .offline-tips {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 30;
+}
+
+.device-card-item .offline-tips > text {
+  font-size: 16px;
+  color: #ffffff;
+}

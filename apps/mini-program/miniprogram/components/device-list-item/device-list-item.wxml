@@ -1,0 +1,25 @@
+<!--components/device-list-item.wxml-->
+<view class="device-list-item">
+
+  <view class="avatar">
+    <image class="" src="" mode=""/>
+    <view wx:if="{{ info.onlineStatus !== 1 }}" class="offline-tips">
+      <text>设备离线</text>
+    </view>
+  </view>
+
+  <view class="info">
+    <view class="title">
+      <text class="truncate">{{ info.channelName }}</text>
+      <image src="../../assets/svg/cloud.svg" mode="" />
+    </view>
+    <!-- TODO ipc设备展示设备sn nvr设备展示通道编码 -->
+    <text>{{ info.channelSn || info.channelId }}</text>
+  </view>
+
+
+  <view class="action">
+    <image src="../../assets/svg/right.svg" mode=""/>
+  </view>
+
+</view>

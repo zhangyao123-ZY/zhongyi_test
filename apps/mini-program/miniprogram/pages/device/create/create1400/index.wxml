@@ -1,0 +1,35 @@
+<!--pages/device/create/create1400/index.wxml-->
+<van-collapse value="{{ activeNames }}" bind:change="onCollapseChange">
+
+  <view
+    class="w-full"
+    wx:for="{{ deviceList }}"
+    wx:key="deviceSn"
+    wx:for-item="device"
+  >
+    <!-- NVR 设备 -->
+    <van-collapse-item
+      wx:if="{{ device.deviceType === 2 }}"
+      title="{{ device.deviceName }}"
+      name="{{ device.deviceSn }}"
+    >
+      <!-- 通道 -->
+      <van-cell
+        wx:for="{{ device.channelList }}"
+        wx:key="channelSn"
+        wx:for-item="channel"
+        title="{{ channel.channelName }}"
+        data-csn="{{ channel.channelSn }}"
+        bind:tap="goToCreate1400"
+      />
+    </van-collapse-item>
+
+    <!-- IPC 设备 -->
+    <van-cell
+      wx:else
+      title="{{ device.channelList[0].channelName }}"
+      data-csn="{{ device.channelList[0].channelSn }}"
+      bind:tap="goToCreate1400"
+    />
+  </view>
+</van-collapse>

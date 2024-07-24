@@ -1,0 +1,30 @@
+<!--pages/device/create/createQLY/net/mac/mac.wxml-->
+<van-toast id="van-toast" />
+
+<view class="full-page">
+  <view class="p-15 w-full h-full flex-1 flex flex-col items-center justify-between border-box">
+
+    <view class="w-full p-8 border-box">
+
+      <van-cell-group>
+        <van-field
+          model:value="{{ deviceName }}"
+          placeholder="请输入"
+          label="设备名称"
+          maxlength="40"
+        />
+
+        <van-field
+          model:value="{{ mac }}"
+          placeholder="请输入"
+          label="MAC 地址"
+          maxlength="12"
+        />
+      </van-cell-group>
+
+    </view>
+
+    <van-button class="w-320 mb-20" type="info" block bind:click="createWithMac">下一步</van-button>
+
+  </view>
+</view>

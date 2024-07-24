@@ -1,0 +1,25 @@
+/* pages/device/list/list.wxss */
+.split-line {
+  margin-right: 8px;
+  width: 2px;
+  height: 16px;
+  background-color: #B9BABB;
+}
+
+.search-component {
+  padding: 0 !important;
+  border: 1px solid #B9BABB;
+  border-radius: 10px;
+}
+
+.search-field {
+  background-color: transparent !important;
+}
+
+.search-input {
+  background-color: transparent !important;
+}
+
+.search-component .search-index--van-search__content {
+  background-color: transparent;
+}

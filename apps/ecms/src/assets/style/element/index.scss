@@ -1,0 +1,34 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #40A9FF
+    ),
+    'danger': (
+      'base': #EA0000
+    ),
+    'success': (
+      'base': #95D475
+    )
+  )
+);
+// @use "element-plus/theme-chalk/src/form.scss";
+// @use "element-plus/theme-chalk/src/form-item.scss";
+// @use "element-plus/theme-chalk/src/input.scss";
+// @use "element-plus/theme-chalk/src/message.scss";
+@use "element-plus/theme-chalk/src/message-box.scss";
+
+/** 按钮取消焦点样式 */
+// .el-button {
+//   &:focus {
+//     color: var(--el-button-text-color);
+//     border-color: var(--el-button-border-color);
+//     background-color: var(--el-button-bg-color);
+//     outline: none;
+//   }
+//   &:hover {
+//     color: var(--el-button-hover-text-color);
+//     border-color: var(--el-button-hover-border-color);
+//     background-color: var(--el-button-hover-bg-color);
+//     outline: none;
+//   }
+// }

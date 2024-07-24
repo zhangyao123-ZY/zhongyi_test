@@ -1,0 +1,121 @@
+<!--pages/device/setting/info/info.wxml-->
+<view class="create-form">
+  <van-cell-group title="设备信息">
+    <van-cell
+      title="设备名称"
+      value="{{ deviceInfo.deviceName }}"
+      data-value="{{ deviceInfo.deviceName }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="设备类型"
+      value="{{ ['未知', 'IPC', 'NVR'][deviceInfo.deviceType] }}"
+      data-value="{{ ['未知', 'IPC', 'NVR'][deviceInfo.deviceType] }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="SIP服务器ID"
+      value="{{ deviceInfo.SIPServerID || deviceInfo.sipserverID }}"
+      data-value="{{ deviceInfo.SIPServerID || deviceInfo.sipserverID }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="SIP服务器域"
+      value="{{ deviceInfo.SIPServerDomain || deviceInfo.sipserverDomain }}"
+      data-value="{{ deviceInfo.SIPServerDomain || deviceInfo.sipserverDomain }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="SIP服务器IP"
+      value="{{ deviceInfo.SIPServerIP || deviceInfo.sipserverIP }}"
+      data-value="{{ deviceInfo.SIPServerIP || deviceInfo.sipserverIP }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="SIP服务器端口"
+      value="{{ deviceInfo.SIPServerPort || deviceInfo.sipserverPort }}"
+      data-value="{{ deviceInfo.SIPServerPort || deviceInfo.sipserverPort }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="登录用户名"
+      value="{{ deviceInfo.loginName }}"
+      data-value="{{ deviceInfo.loginName }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="登录密码"
+      value="{{ deviceInfo.loginPwd }}"
+      data-value="{{ deviceInfo.loginPwd }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="固件版本"
+      value="{{ deviceInfo.firmwareVersion }}"
+      data-value="{{ deviceInfo.firmwareVersion }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="应用程序版本"
+      value="{{ deviceInfo.cameraAppVersion }}"
+      data-value="{{ deviceInfo.cameraAppVersion }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="设备IMEI"
+      value="{{ deviceInfo.imei }}"
+      data-value="{{ deviceInfo.imei }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="设备moduleID"
+      value="{{ deviceInfo.moduleId }}"
+      data-value="{{ deviceInfo.moduleId }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="是否内网"
+      value="{{ ['未知', '是', '否'][deviceInfo.isIntranet] }}"
+      data-value="{{ ['未知', '是', '否'][deviceInfo.isIntranet] }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="是否绑定下级域"
+      value="{{ ['未知', '是', '否'][deviceInfo.isSubDomain] }}"
+      data-value="{{ ['未知', '是', '否'][deviceInfo.isSubDomain] }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="拉流协议"
+      value="{{ ['未知', 'TCP', 'UDP'][deviceInfo.pullProtocol] }}"
+      data-value="{{ ['未知', 'TCP', 'UDP'][deviceInfo.pullProtocol] }}"
+      bind:tap="copy"
+    />
+  </van-cell-group>
+  <van-cell-group title="通道信息">
+    <van-cell
+      title="通道编码"
+      value="{{ channelInfo.channelSn }}"
+      data-value="{{ channelInfo.channelSn }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="通道号"
+      value="{{ channelInfo.channelId }}"
+      data-value="{{ channelInfo.channelId }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="通道名称"
+      value="{{ channelInfo.channelName }}"
+      data-value="{{ channelInfo.channelName }}"
+      bind:tap="copy"
+    />
+    <van-cell
+      title="在线状态"
+      value="{{ ['离线', '在线', '休眠'][channelInfo.onlineStatus] }}"
+      data-value="{{ ['离线', '在线', '休眠'][channelInfo.onlineStatus] }}"
+      bind:tap="copy"
+    />
+  </van-cell-group>
+</view>

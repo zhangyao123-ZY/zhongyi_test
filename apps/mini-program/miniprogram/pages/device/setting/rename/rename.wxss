@@ -1,0 +1,5 @@
+/* pages/device/setting/rename/rename.wxss */
+.van-button {
+  width: 230px;
+  margin-bottom: 76px;
+}

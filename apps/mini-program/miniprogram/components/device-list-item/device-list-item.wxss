@@ -1,0 +1,97 @@
+/* components/device-list-item.wxss */
+:host {
+  display: block;
+  padding: 2px;
+}
+
+.device-list-item {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 8px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.device-list-item > .avatar {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.device-list-item > .avatar > image {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.device-list-item > .avatar .offline-tips {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.device-list-item > .avatar .offline-tips > text {
+  font-size: 10px;
+  color: white;
+}
+
+.device-list-item > .info {
+  margin-left: 24px;
+  margin-right: 24px;
+  flex: 1 1 0%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.device-list-item > .info text {
+  margin-top: 10px;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.device-list-item > .info > .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.device-list-item > .info > .title > text {
+  margin-top: 0;
+  font-size: 18px;
+  color: #3D3D3D;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.device-list-item > .info > .title > image {
+  width: 16px;
+  height: 16px;
+}
+
+.device-list-item > .action {
+  padding: 6px;
+}
+
+.device-list-item > .action > image {
+  width: 16px;
+  height: 16px;
+}

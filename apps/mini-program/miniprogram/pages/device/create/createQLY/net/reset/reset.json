@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "重置摄像机",
+  "usingComponents": {
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  }
+}
